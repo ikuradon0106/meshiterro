@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_14_122221) do
+ActiveRecord::Schema.define(version: 2025_03_16_085046) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -39,6 +39,9 @@ ActiveRecord::Schema.define(version: 2025_03_14_122221) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
+
+# Could not dump table "post_comments" because of following StandardError
+#   Unknown type 'referencesrake' for column 'post_image'
 
   create_table "post_images", force: :cascade do |t|
     t.string "shop_name"
